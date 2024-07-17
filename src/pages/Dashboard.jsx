@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
 import { TbCurrencyTaka } from "react-icons/tb";
 import { CgDollar } from "react-icons/cg";
 import { LuArrowDownLeft } from "react-icons/lu";
 import { FiArrowUpRight } from "react-icons/fi";
+import { GiCash } from "react-icons/gi";
+import { MdOutlineMobileFriendly } from "react-icons/md";
+import { BsCashCoin } from "react-icons/bs";
 
 const Dashboard = () => {
   return (
@@ -56,21 +60,24 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-10 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {/* send money  */}
-          <div className="bg-primarySlate flex flex-col items-center justify-center gap-5 p-8 rounded-xl">
-          <div className="w-60 h-44">
-            </div>
+          <Link to="/send-money" className="bg-primarySlate flex flex-col items-center justify-center gap-5 p-8 rounded-xl">
+            <GiCash className="text-5xl" />
             <span className="text-3xl font-semibold">Send Money</span>
+          </Link>
+
+          {/* mobile recharge  */}
+          <div to="mobile-recharge" className="bg-primarySlate flex flex-col items-center justify-center gap-5 p-8 rounded-xl">
+          <MdOutlineMobileFriendly className="text-5xl" />
+            <span className="text-3xl font-semibold">Mobile Recharge</span>
           </div>
 
-          {/* send money  */}
+          {/* cash out  */}
           <div className="bg-primarySlate flex flex-col items-center justify-center gap-5 p-8 rounded-xl">
-            <div className="w-60 h-44">
-            </div>
-            <span className="text-3xl font-semibold">Send Money</span>
+          <BsCashCoin className="text-5xl" />
+            <span className="text-3xl font-semibold">Cash Out</span>
           </div>
-          
         </div>
       </div>
 
