@@ -29,7 +29,7 @@ const Root = () => {
             <FaUserCircle className="text-2xl" />
           </div>
         </nav>
-        <div className="mx-10 mt-10 h-[88vh]">
+        <div className="mt-10 mx-10 h-[88vh]">
           <Outlet />
         </div>
       </div>

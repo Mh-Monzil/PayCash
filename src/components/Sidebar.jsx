@@ -1,7 +1,6 @@
 
 import { Link, NavLink } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
-import { GrLogout } from "react-icons/gr";
 import { FaTelegramPlane, FaHome } from "react-icons/fa";
 import { BiSend } from "react-icons/bi";
 import { HiCash } from "react-icons/hi";

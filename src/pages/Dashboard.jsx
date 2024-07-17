@@ -6,13 +6,16 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { GiCash } from "react-icons/gi";
 import { MdOutlineMobileFriendly } from "react-icons/md";
 import { BsCashCoin } from "react-icons/bs";
+import { BiSolidShoppingBags } from "react-icons/bi";
+import { RiBillFill } from "react-icons/ri";
+import { FaTicketSimple } from "react-icons/fa6";
 
 const Dashboard = () => {
   return (
     <div className="text-white flex gap-8 items-start">
       {/* left  */}
       <div>
-        <div className="flex items-center  gap-5">
+        <div className="flex items-center  gap-5 pb-12">
           {/* balance  */}
           <div className="bg-primarySlate w-96 h-52 rounded-xl p-6 space-y-3">
             <div className="flex items-center justify-between text-yellow-400 text-xl ">
@@ -60,29 +63,49 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+        
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pt-12 border-t-2 border-primarySlate">
           {/* send money  */}
           <Link to="/send-money" className="bg-primarySlate flex flex-col items-center justify-center gap-5 p-8 rounded-xl">
-            <GiCash className="text-5xl" />
+            <GiCash className="text-5xl text-yellow-400" />
             <span className="text-3xl font-semibold">Send Money</span>
           </Link>
 
           {/* mobile recharge  */}
           <div to="mobile-recharge" className="bg-primarySlate flex flex-col items-center justify-center gap-5 p-8 rounded-xl">
-          <MdOutlineMobileFriendly className="text-5xl" />
+          <MdOutlineMobileFriendly className="text-5xl text-green-400" />
             <span className="text-3xl font-semibold">Mobile Recharge</span>
           </div>
 
           {/* cash out  */}
           <div className="bg-primarySlate flex flex-col items-center justify-center gap-5 p-8 rounded-xl">
-          <BsCashCoin className="text-5xl" />
+          <BsCashCoin className="text-5xl text-teal-400" />
             <span className="text-3xl font-semibold">Cash Out</span>
+          </div>
+
+          {/* payment  */}
+          <div className="bg-primarySlate flex flex-col items-center justify-center gap-5 p-8 rounded-xl">
+          <BiSolidShoppingBags className="text-5xl text-orange-400" />
+            <span className="text-3xl font-semibold">Payment</span>
+          </div>
+
+          {/* pay bill  */}
+          <div className="bg-primarySlate flex flex-col items-center justify-center gap-5 p-8 rounded-xl">
+          <RiBillFill className="text-5xl text-yellow-300" />
+            <span className="text-3xl font-semibold">Pay Bill</span>
+          </div>
+
+          {/* tickets  */}
+          <div className="bg-primarySlate flex flex-col items-center justify-center gap-5 p-8 rounded-xl">
+          <FaTicketSimple className="text-5xl text-green-400" />
+            <span className="text-3xl font-semibold">Tickets</span>
           </div>
         </div>
       </div>
 
       {/* right  */}
-      <div className="bg-slate-700 h-screen w-96">h</div>
+      <div className="bg-primarySlate rounded-xl h-96 w-full"></div>
     </div>
   );
 };
