@@ -1,4 +1,3 @@
-
 import { Link, NavLink } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { FaTelegramPlane, FaHome } from "react-icons/fa";
@@ -6,9 +5,7 @@ import { BiSend } from "react-icons/bi";
 import { HiCash } from "react-icons/hi";
 import { GiCash } from "react-icons/gi";
 
-const Sidebar = ({isActive, handleToggle}) => {
-  
-
+const Sidebar = ({ isActive, handleToggle }) => {
   return (
     <>
       <div
@@ -32,7 +29,6 @@ const Sidebar = ({isActive, handleToggle}) => {
 
           {/* Nav Items */}
           <div className="flex flex-col justify-between flex-1 mt-6 ">
-
             {/*  Menu Items */}
             <nav>
               {/* home  */}
@@ -40,7 +36,9 @@ const Sidebar = ({isActive, handleToggle}) => {
                 to="/"
                 className={({ isActive }) =>
                   `flex items-center px-8 py-2 my-5  transition-colors duration-300 border-l-[3px] border-transparent  ${
-                    isActive ? " text-green-400  border-l-yellow-300" : "text-white"
+                    isActive
+                      ? " text-green-400  border-l-yellow-300"
+                      : "text-white"
                   }`
                 }
               >
@@ -52,7 +50,9 @@ const Sidebar = ({isActive, handleToggle}) => {
                 to="/send-money"
                 className={({ isActive }) =>
                   `flex items-center px-8 py-2 my-5  transition-colors duration-300 border-l-[3px] border-transparent  ${
-                    isActive ? " text-green-400  border-l-yellow-300" : "text-white"
+                    isActive
+                      ? " text-green-400  border-l-yellow-300"
+                      : "text-white"
                   }`
                 }
               >
@@ -64,7 +64,9 @@ const Sidebar = ({isActive, handleToggle}) => {
                 to="/cash-out"
                 className={({ isActive }) =>
                   `flex items-center px-8 py-2 my-5  transition-colors duration-300 border-l-[3px] border-transparent  ${
-                    isActive ? " text-green-400  border-l-yellow-300" : "text-white"
+                    isActive
+                      ? " text-green-400  border-l-yellow-300"
+                      : "text-white"
                   }`
                 }
               >
@@ -76,7 +78,9 @@ const Sidebar = ({isActive, handleToggle}) => {
                 to="/cash-in"
                 className={({ isActive }) =>
                   `flex items-center px-8 py-2 my-5  transition-colors duration-300 border-l-[3px] border-transparent  ${
-                    isActive ? " text-green-400  border-l-yellow-300" : "text-white"
+                    isActive
+                      ? " text-green-400  border-l-yellow-300"
+                      : "text-white"
                   }`
                 }
               >
